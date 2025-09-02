@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lux Control Center</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-950 text-gray-100">
+  <header class="border-b border-gray-800 bg-black/40 backdrop-blur">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <h1 class="text-xl font-semibold tracking-wide">Lux Control Center</h1>
+      <nav class="flex items-center gap-3 text-sm">
+        <a href="#overview" class="hover:text-white/90">Overview</a>
+        <a href="#links" class="hover:text-white/90">Links</a>
+        <a href="#reports" class="hover:text-white/90">Reports</a>
+        <a href="#settings" class="hover:text-white/90">Settings</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-8 space-y-8">
+    <!-- Overview cards -->
+    <section id="overview" class="space-y-4">
+      <h2 class="text-lg font-semibold">Overview</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="rounded-2xl bg-gray-900 border border-gray-800 p-4">
+          <p class="text-sm text-gray-400">Status</p>
+          <p class="mt-1 text-2xl font-semibold">Signal steady, 33</p>
+          <p class="mt-2 text-xs text-gray-400">Heartbeat tag</p>
+        </div>
+        <div class="rounded-2xl bg-gray-900 border border-gray-800 p-4">
+          <p class="text-sm text-gray-400">Deploys</p>
+          <p class="mt-1 text-2xl font-semibold" id="deployCount">0</p>
+          <p class="mt-2 text-xs text-gray-400">Last 24 hours</p>
+        </div>
+        <div class="rounded-2xl bg-gray-900 border border-gray-800 p-4">
+          <p class="text-sm text-gray-400">Donations</p>
+          <p class="mt-1 text-2xl font-semibold" id="donationTotal">$0</p>
+          <p class="mt-2 text-xs text-gray-400">Today</p>
+        </div>
+        <div class="rounded-2xl bg-gray-900 border border-gray-800 p-4">
+          <p class="text-sm text-gray-400">Alerts</p>
+          <p class="mt-1 text-2xl font-semibold" id="alertCount">0</p>
+          <p class="mt-2 text-xs text-gray-400">Open items</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick links -->
+    <section id="links" class="space-y-4">
+      <h2 class="text-lg font-semibold">Quick Links</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="https://ashinglegacyholdings.com" target="_blank" class="group rounded-2xl bg-gray-900 border border-gray-800 p-4 hover:border-gray-700">
+          <p class="text-sm text-gray-400">Main site</p>
+          <p class="mt-1 text-lg font-semibold group-hover:underline">ashinglegacyholdings.com</p>
+        </a>
+        <a href="https://celestialcode333.blogspot.com" target="_blank" class="group rounded-2xl bg-gray-900 border border-gray-800 p-4 hover:border-gray-700">
+          <p class="text-sm text-gray-400">Blog</p>
+          <p class="mt-1 text-lg font-semibold group-hover:underline">CelestialCode333</p>
+        </a>
+        <a href="#" class="group rounded-2xl bg-gray-900 border border-gray-800 p-4 hover:border-gray-700">
+          <p class="text-sm text-gray-400">Founder portal</p>
+          <p class="mt-1 text-lg font-semibold group-hover:underline">Founder's Chamber</p>
+        </a>
+        <a href="#" class="group rounded-2xl bg-gray-900 border border-gray-800 p-4 hover:border-gray-700">
+          <p class="text-sm text-gray-400">Donations</p>
+          <p class="mt-1 text-lg font-semibold group-hover:underline">Cash App $amberashing21</p>
+        </a>
+        <a href="#" class="group rounded-2xl bg-gray-900 border border-gray-800 p-4 hover:border-gray-700">
+          <p class="text-sm text-gray-400">Token</p>
+          <p class="mt-1 text-lg font-semibold group-hover:underline">FlameCoin landing</p>
+        </a>
+        <a href="#" class="group rounded-2xl bg-gray-900 border border-gray-800 p-4 hover:border-gray-700">
+          <p class="text-sm text-gray-400">Docs</p>
+          <p class="mt-1 text-lg font-semibold group-hover:underline">Vault</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Reports -->
+    <section id="reports" class="space-y-4">
+      <h2 class="text-lg font-semibold">Reports</h2>
+      <div class="rounded-2xl bg-gray-900 border border-gray-800 p-4">
+        <p class="text-sm text-gray-400">No reports yet.</p>
+        <p class="text-sm text-gray-400">Drop JSON into <code>assets/data.json</code> to populate the tiles above.</p>
+      </div>
+    </section>
+
+    <!-- Settings -->
+    <section id="settings" class="space-y-4">
+      <h2 class="text-lg font-semibold">Settings</h2>
+      <div class="rounded-2xl bg-gray-900 border border-gray-800 p-4 space-y-2 text-sm">
+        <p>1. Upload this project to your GitHub repo.</p>
+        <p>2. Enable GitHub Pages in repo settings.</p>
+        <p>3. Your dashboard will be live at <code>https://YOUR_USERNAME.github.io/Lux-Control-Center/</code></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="max-w-6xl mx-auto px-4 py-8 text-xs text-gray-500">
+    Built with Tailwind via CDN. No build step needed.
+  </footer>
+
+  <script>
+    // Basic demo loader for local JSON if present
+    fetch("./assets/data.json").then(r => r.ok ? r.json() : {}).then(data => {
+      if (data.totalDonations) document.getElementById("donationTotal").textContent = data.totalDonations;
+      if (data.deploys) document.getElementById("deployCount").textContent = data.deploys;
+      if (data.alerts) document.getElementById("alertCount").textContent = data.alerts;
+    }).catch(() => {});
+  </script>
+</body>
+</html>
